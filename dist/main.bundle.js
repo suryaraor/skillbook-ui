@@ -659,30 +659,30 @@ var SkillService = /** @class */ (function () {
     }
     /** GET Skill from the server */
     SkillService.prototype.getSkillAll = function () {
-        return this.http.get('http://localhost:8080/api/skills')
+        return this.http.get('/api/skills')
             .map(function (res) { return res.json(); }).catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["a" /* Observable */].throw(error.json().error || 'Bad response'); });
     };
     /** GET Skill from the server */
     SkillService.prototype.searchSkills = function (term) {
-        return this.http.get('http://localhost:8080/api/skill/' + term)
+        return this.http.get('/api/skill/' + term)
             .map(function (res) { return res.json(); }).catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["a" /* Observable */].throw(error.json().error || 'Bad response'); });
     };
     /** GET Skill by id. Return `undefined` when id not found */
     SkillService.prototype.getSkillNo404 = function (id) {
-        return this.http.get('http://localhost:8080/api/skill/' + id)
+        return this.http.get('/api/skill/' + id)
             .map(function (res) { return res.json(); }).catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["a" /* Observable */].throw(error.json().error || 'Bad response'); });
     };
     /** GET Skill by id. Will 404 if id not found */
     SkillService.prototype.getSkill = function (id) {
         var url = this.skillUrl + "/" + id;
-        return this.http.get('http://localhost:8080/api/skills')
+        return this.http.get('/api/skills')
             .map(function (res) { return res.json(); }).catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["a" /* Observable */].throw(error.json().error || 'Bad response'); });
     };
     //////// Save methods //////////
     /** POST: add a new Skill to the server */
     SkillService.prototype.addSkill = function (skill) {
         console.log('add skill' + skill);
-        this.http.get('http://localhost:8080/api/skill/' + skill.name + '/' + skill.skill)
+        this.http.get('/api/skill/' + skill.name + '/' + skill.skill)
             .map(function (res) { return res.json(); }).catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["a" /* Observable */].throw(error.json().error || 'Bad response'); });
     };
     /** DELETE: delete the Skill from the server */
