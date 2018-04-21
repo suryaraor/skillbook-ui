@@ -1,0 +1,11 @@
+<h3>Top skills</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let skill of skills" class="col-1-4"
+      routerLink="/detail/{{skill.id}}">
+    <div class="module skill">
+      <h4>{{skill.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-skill-search></app-skill-search>

@@ -1,0 +1,14 @@
+<div id="search-component">
+  <h4>Skill Search</h4>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let Skill of Skills$ | async" >
+      <a routerLink="/detail/{{Skill.id}}">
+        {{Skill.name}}
+      </a>
+    </li>
+  </ul>
+</div>
+
