@@ -1,0 +1,5 @@
+com\dstsystems\skillbook\service\SkillBookService.class
+com\dstsystems\skillbook\controller\SkillBookController.class
+com\dstsystems\skillbook\model\SkillBook.class
+com\dstsystems\skillbook\SkillbookApplication.class
+com\dstsystems\skillbook\repository\SkillBookRepository.class

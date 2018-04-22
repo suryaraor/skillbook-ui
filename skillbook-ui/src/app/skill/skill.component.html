@@ -1,0 +1,26 @@
+<div>
+  <br/> 
+  <h2><a href="/"><img src="../../assets/logo.png" width="48px" height="48px"> </a>Skillbook</h2>
+  <br/>
+  <label>Name:
+    <input #personName />  </label>
+   <label>Skill:
+    <input #skillName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(personName.value, skillName.value); personName.value='';skillName.value=''">
+    add
+  </button>
+</div>
+    <br/>
+  <h4>Skill Search</h4>
+  
+  
+<input #searchBox id="search-box" (keyup)="searchSkill(searchBox.value)" />
+<ul class="skills">
+  <li *ngFor="let Skill of skills">
+   <span class="badge">dt{{Skill.id}}</span> {{Skill.name}} -  {{Skill.skill}} - <img src="../../assets/like_color.png" width="24px" height="24px" (click)="addPoint(Skill)"> {{Skill.points}}
+ </li>
+</ul>
+<a href="/"><img src="../../assets/dst.jpg" width="50%"  height="50%"> </a>
+
